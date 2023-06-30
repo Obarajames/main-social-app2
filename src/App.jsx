@@ -6,6 +6,8 @@ import Homepage from './home'
 import Navbar from './navbar'
 
 
+
+
 function App() {
   const [count, setCount] = React.useState(0)
   const [darkMode, setDarkMode] = React.useState(true)
@@ -20,13 +22,14 @@ function App() {
       toggleDarkMode={toggleDarkMode}/>
     <div className="fieldsflex">
     
-      <Log/>
+      {/* <Log/>
       <Signup/>
       </div>
       <div className="auth">
       <Autentification/>
-      
+       */}
       </div>
+      
     </>
   )
 }
