@@ -1,8 +1,10 @@
 import React from "react"
+import Body from './Body'
 
 
 export default function Navbar(props) {
     return (
+        <>
          <nav 
             className={props.darkMode ? "dark": ""}
         >
@@ -25,5 +27,7 @@ export default function Navbar(props) {
                 <p className="toggler--dark">Dark</p>
             </div>
         </nav>
+        <Body />
+        </>
     )
 }
