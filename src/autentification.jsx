@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 /*we are importing auth from logindb */
 import { auth } from "./logindb";
 /*we are creating a arrow function */
+import Navbar from "./navbar";
 const AuthDetails = () => {
   /*we are making a state whose value is null */
   const [authUser, setAuthUser] = useState(null);
@@ -22,6 +23,7 @@ const AuthDetails = () => {
       if (user) {
         // If a user is present, we update the authUser state variable with the user object
         setAuthUser(user);
+        <Navbar/>
       } else {
         // If no user is present, we set the authUser state variable to null
         setAuthUser(null);
@@ -46,6 +48,7 @@ const AuthDetails = () => {
     signOut(auth)
       .then(() => {
         console.log("sign out successful");
+        
       })
       .catch((error) => console.log(error));
   };
